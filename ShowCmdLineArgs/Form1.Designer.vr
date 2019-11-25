@@ -1,0 +1,59 @@
+﻿BegClass Form1 Partial(*Yes)
+
+	// Required method for Designer support - do not modify
+	// the contents of this method with the code editor.
+	BegSr InitializeComponent
+		*this.listboxCmdLineArgs = *new System.Windows.Forms.ListBox()
+		*this.buttonExit = *new System.Windows.Forms.Button()
+		*this.SuspendLayout()
+		//
+		//listboxCmdLineArgs
+		//
+		*this.listboxCmdLineArgs.Anchor = (((System.Windows.Forms.AnchorStyles.Top *BitOr System.Windows.Forms.AnchorStyles.Left) *BitOr System.Windows.Forms.AnchorStyles.Right) *As System.Windows.Forms.AnchorStyles)
+		*this.listboxCmdLineArgs.FormattingEnabled = *True
+		*this.listboxCmdLineArgs.Location = *new System.Drawing.Point(12I, 12I)
+		*this.listboxCmdLineArgs.Name = "listboxCmdLineArgs"
+		*this.listboxCmdLineArgs.Size = *new System.Drawing.Size(418I, 238I)
+		*this.listboxCmdLineArgs.TabIndex = 0I
+		//
+		//buttonExit
+		//
+		*this.buttonExit.Location = *new System.Drawing.Point(184I, 277I)
+		*this.buttonExit.Name = "buttonExit"
+		*this.buttonExit.Size = *new System.Drawing.Size(75I, 23I)
+		*this.buttonExit.TabIndex = 1I
+		*this.buttonExit.Text = "E&xit"
+		*this.buttonExit.UseVisualStyleBackColor = *True
+		//
+		//Form1
+		//
+		*this.AutoScaleDimensions = *new System.Drawing.SizeF(6, 13)
+		*this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+		*this.ClientSize = *new System.Drawing.Size(442I, 332I)
+		*this.Controls.Add(*this.buttonExit)
+		*this.Controls.Add(*this.listboxCmdLineArgs)
+		*this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
+		*this.Name = "Form1"
+		*this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+		*this.Text = "Show Command Line Arguments"
+		*this.ResumeLayout(*False)
+	EndSr
+	
+	DclFld listboxCmdLineArgs Type(System.Windows.Forms.ListBox) Access(*Private) WithEvents(*Yes)
+	DclFld buttonExit Type(System.Windows.Forms.Button) Access(*Private) WithEvents(*Yes)
+	//Required by the Windows Form Designer
+	DclFld components Type(System.ComponentModel.IContainer) Inz(*Nothing)
+	
+	// Clean up any resources being used.
+	// "disposing" is true if managed resources should be disposed; otherwise, false.
+	BegSr Dispose Access(*Protected) Modifier(*Overrides)
+		DclSrParm disposing Type(*Boolean)
+
+		If (disposing *And (components *NE *Nothing))
+			components.Dispose()
+		EndIf
+			
+		*Base.Dispose(disposing)
+	EndSr
+	
+EndClass
