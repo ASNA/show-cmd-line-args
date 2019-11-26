@@ -23,29 +23,18 @@ BegClass Form1 Extends(System.Windows.Forms.Form) Access(*Public) Partial(*Yes)
 
 	/endregion
 
-    DclArray CmdLineArgs Type(*String) Rank(1) 
-
 	BegSr Form1_Load Access(*Private) Event(*this.Load)
 		DclSrParm sender *Object
 		DclSrParm e System.EventArgs
 
         // GetCommandLineArgs always returns the currently-running executable
         // as the zeroth argument. 
-        CmdLineArgs = Environment.GetCommandLineArgs()
-        
-        listboxCmdLineArgs.DataSource = CmdLineArgs
+        listboxCmdLineArgs.DataSource = Environment.GetCommandLineArgs()
 	EndSr
 
 	BegSr buttonExit_Click Access(*Private) Event(*this.buttonExit.Click)
 		DclSrParm sender Type(*Object)
 		DclSrParm e Type(System.EventArgs)
-
-        DclFld ReturnValue Type(*Integer4) 
-
-        If CmdLineArgs[1] = 'Set return code'
-            ReturnValue = Convert.ToInt32(CmdLineArgs[2]) 
-            Environment.ExitCode = ReturnValue 
-        EndIf 
 
         *This.Close()
 	EndSr

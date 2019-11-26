@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ShowCmdLineArgs</RootNamespace>
     <AssemblyName>ShowCmdLineArgs</AssemblyName>
-    <StartupObject>BegSr Main</StartupObject>
+    <StartupObject>ShowCmdLineArgs.Form1</StartupObject>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <Name>ShowCmdLineArgs</Name>
   </PropertyGroup>
@@ -47,10 +47,6 @@
       <DependentUpon>Form1.vr</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.vr" />
-    <Compile Include="StartUp.vr">
-      <SubType>
-      </SubType>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vr</DependentUpon>
     </EmbeddedResource>
