@@ -8,35 +8,35 @@ Using System.Windows.Forms
 
 BegClass Form1 Extends(System.Windows.Forms.Form) Access(*Public) Partial(*Yes)
 
-	/region Default Constructor
-	
-	BegConstructor Access(*Public)
-		//
-		// Required for Windows Form Designer support
-		//
-		InitializeComponent()
+    /region Default Constructor
+    
+    BegConstructor Access(*Public)
+        //
+        // Required for Windows Form Designer support
+        //
+        InitializeComponent()
 
-		//
-		// TODO: Add any constructor code after InitializeComponent call
-		//
-	EndConstructor
+        //
+        // TODO: Add any constructor code after InitializeComponent call
+        //
+    EndConstructor
 
-	/endregion
+    /endregion
 
-	BegSr Form1_Load Access(*Private) Event(*this.Load)
-		DclSrParm sender *Object
-		DclSrParm e System.EventArgs
+    BegSr Form1_Load Access(*Private) Event(*this.Load)
+        DclSrParm sender *Object
+        DclSrParm e System.EventArgs
 
         // GetCommandLineArgs always returns the currently-running executable
         // as the zeroth argument. 
         listboxCmdLineArgs.DataSource = Environment.GetCommandLineArgs()
-	EndSr
+    EndSr
 
-	BegSr buttonExit_Click Access(*Private) Event(*this.buttonExit.Click)
-		DclSrParm sender Type(*Object)
-		DclSrParm e Type(System.EventArgs)
+    BegSr buttonExit_Click Access(*Private) Event(*this.buttonExit.Click)
+        DclSrParm sender Type(*Object)
+        DclSrParm e Type(System.EventArgs)
 
         *This.Close()
-	EndSr
-	
+    EndSr
+    
 EndClass
